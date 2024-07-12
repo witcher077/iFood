@@ -46,8 +46,8 @@ const CatagoryItems = (props) => {
   return (
     <div className='flex justify-between mt-5 border-blue-100 border-b-2 pb-4'>
     <div className='w-3/5'>
-        <h2 className='font-bold mb-4 text-blue-500'>{detail?.info?.name+" - "+" Rs. "+detail?.info?.price/100}</h2>
-        <p className=' text-gray-600 leading-5 text-sm'>{props?.item?.card?.info?.description}</p>
+        <h2 className='font-bold mb-4 text-blue-500 dark:text-white'>{detail?.info?.name+" - "+" Rs. "+detail?.info?.price/100}</h2>
+        <p className=' text-gray-600 leading-5 text-sm dark:text-white'>{props?.item?.card?.info?.description}</p>
     </div>
     <div className='w-2/5    relative mt-10 pl-6 '>
         <img className='rounded-lg h-44 w-52  ' src={Img_CDN+imageurl} alt="img"/>

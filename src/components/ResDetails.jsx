@@ -19,7 +19,7 @@ const ResDetails = () => {
         fetchresDetails();
     }, [])
 
-    if (resdetail.length === 0) {
+    if (resdetail.length ===0) {
         return <Detailsimmer />
     }
 
@@ -45,8 +45,9 @@ const ResDetails = () => {
             console.error(error);
         }
     }
+    // console.log(resdetail);
 
-    const { name } = resdetail[0]?.card?.card?.info;
+    const { name } = resdetail[2]?.card?.card?.info;
 
 
 
@@ -65,12 +66,19 @@ const ResDetails = () => {
 
     // const menu = resdetail[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1].card?.card?.itemCards;
 
-    const catogory=resdetail[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(catogory=>catogory.card?.card?.title);
+    function rescatogories(){
+      const filteredcatgory= resdetail.filter(ele=>ele.groupedCard);
+      return filteredcatgory[0]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(catogory=>catogory.card?.card?.title);
+    }
+
+    // const catogory=resdetail[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(catogory=>catogory.card?.card?.title);
+    const catogory=rescatogories()
+    console.log(catogory);
 
     
 
     return (
-        <div className='mx-auto w-6/12 bg-white  px-4 rounded-lg dark:bg-gray-800'>
+        <div className='mx-auto w-6/12 bg-white  px-4 rounded-lg dark:bg-gray-800 mb-5'>
             <h2 className='my-2 uppercase font-bold dark:text-white text-blue-700'>{name}</h2>
             <div className=' flex justify-between flex-wrap py-4'>
                 {

@@ -119,9 +119,9 @@ theme==="moon"?element.classList.add("dark"):element.classList.remove("dark");
 
 
     </div>
-    <div className="res-container flex flex-wrap justify-between">
+    <div className="res-container flex flex-wrap justify-center items-stretch">
       {FilteredRestaurant?.map(restaurant => 
-      <Link key={restaurant.info.id} to={"/restaurant/" + restaurant.info.id} >
+      <Link className="flex" key={restaurant.info.id} to={"/restaurant/" + restaurant.info.id} >
 
         {
           

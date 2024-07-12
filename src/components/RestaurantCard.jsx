@@ -23,7 +23,7 @@ const RestraurantCard=(props)=>{
     }, [theme])
     // return null
 
-  return(<div className="res-container  hover:scale-105 transition-all duration-1000 ">
+  return(<div className="res-container  hover:scale-105 transition-all duration-1000 grid h-full card">
   <div className="m-2 p-4 w-[230px] rounded-lg bg-slate-100 shadow-2xl dark:bg-gray-600">
   <img className="rounded-lg" src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_850,h_504/${imgUrl}`}></img>
   <h3 className=" font-bold text-lg dark:text-white text-blue-500">{resName}</h3>

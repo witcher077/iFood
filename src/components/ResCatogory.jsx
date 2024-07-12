@@ -28,8 +28,8 @@ const ResCatogory = ({catogory,showItems,setExpandIndex}) => {
     return (
         <div className='w-full border-slate-200 mb-3 border-b-8  py-8'>
             <div className='flex justify-between cursor-pointer select-none' onClick={clickHandler}>
-                <h1 className=' font-bold text-lg text-slate-600'>{catogory.title} ({filteredItems.length})</h1>
-                <span> {!showItems ? "▼" : "▲" } </span>
+                <h1 className=' font-bold text-lg text-slate-600 dark:text-white'>{catogory.title} ({filteredItems.length})</h1>
+                <span className='dark:text-white'> {!showItems ? "▼" : "▲" } </span>
             </div>
             {    
             

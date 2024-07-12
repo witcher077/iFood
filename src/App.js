@@ -23,7 +23,7 @@ import ThemeContextProvider from "./Context/ThemeContextProvider";
     return (
         <ThemeContextProvider>
         <Provider store={appStore}>
-        <div className="App relative">
+        <div className="App relative dark:bg-gray-950">
             <Header />
             <Outlet />
             <Footer/>
